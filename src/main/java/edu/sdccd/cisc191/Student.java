@@ -1,15 +1,12 @@
 package edu.sdccd.cisc191;
-
 /**
  * Module 1 - Part B
  * Student data model with validation.
  */
 public class Student {
-
     private final String name;
     private final double gpa;
     private final int id;
-
     /**
      * Validation rules:
      * - name must not be null or blank
@@ -28,24 +25,19 @@ public class Student {
         if (id <= 0) {
             throw new IllegalArgumentException("ID must be greater than 0");
         }
-
         this.name = name;
         this.gpa = gpa;
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
-
     public double getGpa() {
         return gpa;
     }
-
     public int getId() {
         return id;
     }
-
     @Override
     public String toString() {
         return String.format("Student{id=%d, name='%s', gpa=%.2f}", id, name, gpa);
